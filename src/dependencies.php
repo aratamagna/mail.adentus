@@ -36,3 +36,8 @@ $container['mail'] = function ($c) {
     $mail->Port = $settings['port'];
     return $mail;
 };
+
+// userlist
+$container['users'] = function ($c) {
+  return $c->get('settings')['users'];
+}
