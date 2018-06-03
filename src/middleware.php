@@ -3,6 +3,6 @@
 
 // e.g: $app->add(new \Slim\Csrf\Guard);
 
-$app->add(new Tuupola\Middleware\HttpBasicAuthentication([
+$app->add(new Slim\Middleware\HttpBasicAuthentication([
   "users" => $this->users
 ]));
