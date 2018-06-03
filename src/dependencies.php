@@ -26,13 +26,13 @@ $container['logger'] = function ($c) {
 $container['mail'] = function ($c) {
     $settings = $c->get('settings')['mail'];
     $mail = new PHPMailer(true);
-    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
-    $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = $settings['host'];  // Specify main and backup SMTP servers
-    $mail->SMTPAuth = $settings['SMTPAuth'];                               // Enable SMTP authentication
-    $mail->Username = $settings['username'];                 // SMTP username
-    $mail->Password = $settings['password'];                           // SMTP password
-    $mail->SMTPSecure = $settings['SMTPSecure'];                            // Enable TLS encryption, `ssl` also accepted
+    $mail->SMTPDebug = 2;
+    $mail->isSMTP();
+    $mail->Host = $settings['host'];
+    $mail->SMTPAuth = $settings['SMTPAuth'];
+    $mail->Username = $settings['username']
+    $mail->Password = $settings['password'];
+    $mail->SMTPSecure = $settings['SMTPSecure'];
     $mail->Port = $settings['port'];
     return $mail;
 };
