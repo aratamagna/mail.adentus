@@ -40,4 +40,4 @@ $container['mail'] = function ($c) {
 // userlist
 $container['users'] = function ($c) {
   return $c->get('settings')['users'];
-}
+};
