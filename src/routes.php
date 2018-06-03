@@ -5,16 +5,14 @@ use Slim\Http\Response;
 
 // Routes
 
-$app->get('/[{name}]', function (Request $request, Response $response, array $args) {
-    // Sample log message
-    $this->logger->info("Slim-Skeleton '/' route");
-
-    // Render index view
-    return $response;
+$app->get('/', function (Request $request, Response $response, array $args) {
+    $this->logger->info("GET /".date("Y-m-d H:i:s"));
+    return $response->withStatus(404);
 });
 
 
 $app->post('/', function ($request, $response, $args) {
+    $this->logger->info("POST /".date("Y-m-d H:i:s"));
     $input = $request->getParsedBody();
 
     try {
