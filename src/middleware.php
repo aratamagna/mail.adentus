@@ -4,5 +4,5 @@
 // e.g: $app->add(new \Slim\Csrf\Guard);
 
 $app->add(new Slim\Middleware\HttpBasicAuthentication([
-  "users" => $app->users
+  "users" => $container['users']
 ]));
