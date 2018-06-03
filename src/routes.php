@@ -5,11 +5,6 @@ use Slim\Http\Response;
 
 // Routes
 
-$app->get('/', function (Request $request, Response $response, array $args) {
-  $this->logger->info("GET / ".date("Y-m-d H:i:s"));
-  return $response->withStatus(404);
-});
-
 $app->post('/', function ($request, $response, $args) {
   $this->logger->info("POST / ".date("Y-m-d H:i:s"));
   $input = $request->getParsedBody();

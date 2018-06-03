@@ -30,7 +30,7 @@ $container['mail'] = function ($c) {
     $mail->isSMTP();
     $mail->Host = $settings['host'];
     $mail->SMTPAuth = $settings['SMTPAuth'];
-    $mail->Username = $settings['username']
+    $mail->Username = $settings['username'];
     $mail->Password = $settings['password'];
     $mail->SMTPSecure = $settings['SMTPSecure'];
     $mail->Port = $settings['port'];
