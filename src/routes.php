@@ -15,7 +15,7 @@ $app->post('/', function ($request, $response, $args) {
     $this->mail->addAddress($input['address']);
 
     if (!empty($input['attachment'])){
-      if (array_key_exists('file', $input['attachment']){
+      if (array_key_exists('file', $input['attachment'])){
         $attachment = substr($input['attachment']['file'], strpos($input['attachment']['file'], ","));
         if (!array_key_exists('name', $input['attachment'])){
           $name = uniqid();
