@@ -30,7 +30,7 @@ $app->post('/', function ($request, $response, $args) {
         } else {
           $type = $input['attachment']['type'];
         }
-        $this->mail->addStringAttachment($attachment, $name, $encoding, $type);
+        $this->mail->addStringAttachment($attachment, $name);
       }
     }
 
