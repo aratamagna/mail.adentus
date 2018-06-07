@@ -16,7 +16,7 @@ $app->post('/', function ($request, $response, $args) {
 
     if (!empty($input['attachment'])){
       if (array_key_exists('file', $input['attachment'])){
-        $attachment = substr($input['attachment']['file'], strpos($input['attachment']['file'], ","));
+        $attachment = substr($input['attachment']['file'], strpos($input['attachment']['file'], ",")+1);
         if (!array_key_exists('name', $input['attachment'])){
           $name = uniqid();
         } else {
