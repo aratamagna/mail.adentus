@@ -22,14 +22,14 @@ $app->post('/', function ($request, $response, $args) {
         } else {
           $name = $input['attachment']['name'];
         }
-        if (!array_key_exists('encoding', $input['attachment'])){
-          $encoding = "base64";
-        }
-        if (!array_key_exists('type', $input['attachment'])){
-          $type = mime_content_type($name);
-        } else {
-          $type = $input['attachment']['type'];
-        }
+        // if (!array_key_exists('encoding', $input['attachment'])){
+        //   $encoding = "base64";
+        // }
+        // if (!array_key_exists('type', $input['attachment'])){
+        //   $type = mime_content_type($name);
+        // } else {
+        //   $type = $input['attachment']['type'];
+        // }
         $this->mail->addStringAttachment(base64_decode($attachment), $name);
       }
     }
