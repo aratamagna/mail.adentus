@@ -26,7 +26,7 @@ $container['logger'] = function ($c) {
 $container['mail'] = function ($c) {
     $settings = $c->get('settings')['mail'];
     $mail = new PHPMailer(true);
-    $mail->SMTPDebug = 2;
+    $mail->SMTPDebug = 0;
     $mail->isSMTP();
     $mail->Host = $settings['host'];
     $mail->SMTPAuth = $settings['SMTPAuth'];
